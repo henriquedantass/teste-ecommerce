@@ -55,7 +55,7 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
       }
   };
 
-  const removeProduct = (productId: number) => {
+  const removeProduct = (productId: number) => {  // Função para remover um produto
       const productExists = cart.some(cartProduct => cartProduct.id === productId);
       if (!productExists) {
         return
@@ -67,14 +67,14 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
       }
   };
 
-  const updateProductAmount = async ({
+  const updateProductAmount = async ({   //Função para atualiza os itens do carrinho
     productId,
     amount,
   }: UpdateProductAmount) => {
-      const updateCart = cart.map(cartItem => cartItem.id === productId ? {
+      const updateCart = cart.map(cartItem => cartItem.id === productId ? { // aqui ele verifica o id do produto
         ...cartItem, amount: amount
       } : cartItem)
-      setCart(updateCart)
+      setCart(updateCart) 
       localStorage.setItem('@Ecommerce:cart', JSON.stringify(updateCart))
   };
 
