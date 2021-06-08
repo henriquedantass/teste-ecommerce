@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-
+import background from '../assets/images/backgroundpizza.jpg';
 
 export default createGlobalStyle`
   * {
@@ -10,7 +10,8 @@ export default createGlobalStyle`
   }
 
   body {
-    background: black;
+    background: url(${background}) no-repeat center top;
+    background-size: cover;
   }
 
   body, input, button {

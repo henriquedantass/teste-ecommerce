@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
-import logo from '../../assets/images/logo.svg';
+import home from '../../assets/images/home.svg';
 import { Container, Cart } from './styles';
 import { useCart } from '../../hooks/useCart';
 
@@ -13,7 +13,7 @@ const Header = (): JSX.Element => {
   return (
     <Container>
       <Link to="/">
-        <img src={logo} alt="Rocketshoes" />
+        <img src={home} alt="Rocketshoes" />
       </Link>
       <Cart to="/cart">
         <div>
